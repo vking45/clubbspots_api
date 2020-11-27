@@ -1,0 +1,16 @@
+{% extends 'safespace/base.html' %}
+{% block title %}Update Capacity{% endblock %}
+{% block content %}
+
+
+<h1>Update</h1>
+<h1>{{context.name}}</h1>
+<br/><br/>
+
+<div class="form-group">
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-secondary">UPDATE</button>
+</div>
+{% endblock %}
